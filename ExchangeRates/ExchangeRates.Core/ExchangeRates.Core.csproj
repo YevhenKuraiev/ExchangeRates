@@ -3,15 +3,17 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>netstandard1.4</TargetFramework>
+    <TargetFramework>netstandard2.0</TargetFramework>
     <PackageTargetFallback>portable-net45+win8+wpa81</PackageTargetFallback>
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="Flurl.Http" Version="2.4.0" />
     <PackageReference Include="MvvmCross" Version="5.2.1" />
     <PackageReference Include="MvvmCross.Binding" Version="5.2.1" />
     <PackageReference Include="MvvmCross.Core" Version="5.2.1" />
     <PackageReference Include="MvvmCross.Platform" Version="5.2.1" />
+    <PackageReference Include="PropertyChanged.Fody" Version="2.5.11" />
   </ItemGroup>
     
 </Project>

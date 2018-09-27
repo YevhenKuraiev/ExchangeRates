@@ -1,15 +1,34 @@
+using ExchangeRates.Core.Models;
+using Flurl.Http;
 using MvvmCross.Core.ViewModels;
+using System;
+using System.Threading.Tasks;
 
 namespace ExchangeRates.Core.ViewModels
 {
-    public class FirstViewModel
-        : MvxViewModel
+    public class FirstViewModel : MvxViewModel
     {
-        string hello = "Hello MvvmCross";
-        public string Hello
+        public MvxObservableCollection<ExchangeRatesModel> Currencies { get; set; }
+
+
+        public FirstViewModel()
         {
-            get { return hello; }
-            set { SetProperty(ref hello, value); }
+            Task.Run(async () =>
+            {
+                try
+                {
+                    var result = await "https://api.privatbank.ua/p24api/pubinfo?json&exchange&coursid=5"
+                    .GetJsonAsync<MvxObservableCollection<ExchangeRatesModel>>();
+                    if (result != null)
+                    {
+                        Currencies = new MvxObservableCollection<ExchangeRatesModel>(result);
+                    }
+                }
+                catch (Exception ex)
+                {
+
+                }
+            });
         }
     }
 }
