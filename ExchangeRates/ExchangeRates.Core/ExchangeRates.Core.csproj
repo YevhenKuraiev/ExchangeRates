@@ -8,6 +8,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="Acr.UserDialogs" Version="7.0.1" />
     <PackageReference Include="Flurl.Http" Version="2.4.0" />
     <PackageReference Include="MvvmCross" Version="5.2.1" />
     <PackageReference Include="MvvmCross.Binding" Version="5.2.1" />

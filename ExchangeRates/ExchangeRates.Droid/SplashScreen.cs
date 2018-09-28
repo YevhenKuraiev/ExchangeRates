@@ -1,6 +1,9 @@
+using Acr.UserDialogs;
 using Android.App;
 using Android.Content.PM;
 using MvvmCross.Droid.Views;
+using MvvmCross.Platform;
+using MvvmCross.Platform.Droid.Platform;
 
 namespace ExchangeRates.Droid
 {
@@ -13,9 +16,9 @@ namespace ExchangeRates.Droid
         , ScreenOrientation = ScreenOrientation.Portrait)]
     public class SplashScreen : MvxSplashScreenActivity
     {
-        public SplashScreen()
-            : base(Resource.Layout.SplashScreen)
+        public SplashScreen() : base(Resource.Layout.SplashScreen)
         {
+            
         }
     }
 }

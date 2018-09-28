@@ -1,3 +1,5 @@
+using Acr.UserDialogs;
+using MvvmCross.Platform;
 using MvvmCross.Platform.IoC;
 
 namespace ExchangeRates.Core
@@ -12,6 +14,7 @@ namespace ExchangeRates.Core
                 .RegisterAsLazySingleton();
 
             RegisterNavigationServiceAppStart<ViewModels.FirstViewModel>();
+            Mvx.RegisterSingleton<IUserDialogs>(() => UserDialogs.Instance);
         }
     }
 }

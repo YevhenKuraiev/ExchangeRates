@@ -1,6 +1,9 @@
+using Acr.UserDialogs;
 using ExchangeRates.Core.Models;
 using Flurl.Http;
 using MvvmCross.Core.ViewModels;
+using MvvmCross.Platform;
+using MvvmCross.Platform.Core;
 using System;
 using System.Threading.Tasks;
 
@@ -11,9 +14,9 @@ namespace ExchangeRates.Core.ViewModels
         public MvxObservableCollection<ExchangeRatesModel> Currencies { get; set; }
 
 
-        public FirstViewModel()
+        public override async void ViewAppearing()
         {
-            Task.Run(async () =>
+            using (UserDialogs.Instance.Loading())
             {
                 try
                 {
@@ -26,9 +29,14 @@ namespace ExchangeRates.Core.ViewModels
                 }
                 catch (Exception ex)
                 {
-
+                    UserDialogs.Instance.Alert(ex.Message, "Error");
                 }
-            });
+            }
+        }
+
+        public FirstViewModel()
+        {
+
         }
     }
 }
