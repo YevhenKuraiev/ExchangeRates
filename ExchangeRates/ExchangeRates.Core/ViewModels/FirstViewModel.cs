@@ -5,14 +5,26 @@ using MvvmCross.Core.ViewModels;
 using MvvmCross.Platform;
 using MvvmCross.Platform.Core;
 using System;
+using System.Collections.ObjectModel;
 using System.Threading.Tasks;
 
 namespace ExchangeRates.Core.ViewModels
 {
     public class FirstViewModel : MvxViewModel
     {
-        public MvxObservableCollection<ExchangeRatesModel> Currencies { get; set; }
+        private readonly ExchangeRatesModel exchangeRatesModel = new ExchangeRatesModel();
+        public MvxObservableCollection<ExchangeRatesDTO> Currencies => exchangeRatesModel.Currencies;
 
+        public MvxCommand<ExchangeRatesDTO> ItemSelectedCommand => new MvxCommand<ExchangeRatesDTO>(ItemSelected);
+
+        public FirstViewModel()
+        {
+        }
+
+        public void ItemSelected(ExchangeRatesDTO item)
+        {
+
+        }
 
         public override async void ViewAppearing()
         {
@@ -20,12 +32,8 @@ namespace ExchangeRates.Core.ViewModels
             {
                 try
                 {
-                    var result = await "https://api.privatbank.ua/p24api/pubinfo?json&exchange&coursid=5"
-                    .GetJsonAsync<MvxObservableCollection<ExchangeRatesModel>>();
-                    if (result != null)
-                    {
-                        Currencies = new MvxObservableCollection<ExchangeRatesModel>(result);
-                    }
+                    await exchangeRatesModel.GetExchangeRatesAsync();
+                    RaisePropertyChanged("Currencies");
                 }
                 catch (Exception ex)
                 {
@@ -34,9 +42,6 @@ namespace ExchangeRates.Core.ViewModels
             }
         }
 
-        public FirstViewModel()
-        {
 
-        }
     }
 }
