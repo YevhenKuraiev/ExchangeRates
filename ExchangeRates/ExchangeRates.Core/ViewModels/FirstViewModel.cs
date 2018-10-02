@@ -1,6 +1,7 @@
 using Acr.UserDialogs;
 using ExchangeRates.Core.Models;
 using Flurl.Http;
+using MvvmCross.Core.Navigation;
 using MvvmCross.Core.ViewModels;
 using MvvmCross.Platform;
 using MvvmCross.Platform.Core;
@@ -12,17 +13,20 @@ namespace ExchangeRates.Core.ViewModels
 {
     public class FirstViewModel : MvxViewModel
     {
+        private readonly IMvxNavigationService _navigationService;
         private readonly ExchangeRatesModel exchangeRatesModel = new ExchangeRatesModel();
         public MvxObservableCollection<ExchangeRatesDTO> Currencies => exchangeRatesModel.Currencies;
 
         public MvxCommand<ExchangeRatesDTO> ItemSelectedCommand => new MvxCommand<ExchangeRatesDTO>(ItemSelected);
 
-        public FirstViewModel()
+        public FirstViewModel(IMvxNavigationService navigationService)
         {
+            _navigationService = navigationService;
         }
 
         public void ItemSelected(ExchangeRatesDTO item)
         {
+            _navigationService.Navigate<DetailViewModel, ExchangeRatesDTO>(item);
 
         }
 

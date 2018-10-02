@@ -14,6 +14,7 @@ namespace ExchangeRates.Core
                 .RegisterAsLazySingleton();
 
             RegisterNavigationServiceAppStart<ViewModels.FirstViewModel>();
+            //RegisterNavigationServiceAppStart<ViewModels.DetailViewModel>();
             Mvx.RegisterSingleton<IUserDialogs>(() => UserDialogs.Instance);
         }
     }

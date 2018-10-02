@@ -119,6 +119,7 @@
     <Compile Include="Setup.cs" />
     <Compile Include="SplashScreen.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Views\DetailView.cs" />
     <Compile Include="Views\FirstView.cs" />
     <Compile Include="Views\BaseView.cs" />
     <Compile Include="Resources\Resource.Designer.cs" />
@@ -128,6 +129,11 @@
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\layout\main_list_item.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\layout\DetailView.axml">
       <SubType>Designer</SubType>
     </AndroidResource>
   </ItemGroup>
