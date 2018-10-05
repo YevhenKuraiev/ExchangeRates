@@ -1,6 +1,9 @@
 using Android.OS;
 using Android.Support.V7.Widget;
+using ExchangeRates.Core.SQLite;
+using ExchangeRates.Droid.Services;
 using MvvmCross.Droid.Support.V7.AppCompat;
+using MvvmCross.Platform;
 
 namespace ExchangeRates.Droid.Views
 {
@@ -21,6 +24,8 @@ namespace ExchangeRates.Droid.Views
                 SupportActionBar.SetDisplayHomeAsUpEnabled(true);
                 SupportActionBar.SetHomeButtonEnabled(true);
             }
+
+            Mvx.RegisterSingleton<ISQLite>(new SQLiteAndroid());
         }
 
         protected abstract int LayoutResource { get; }
