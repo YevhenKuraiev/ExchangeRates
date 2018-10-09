@@ -19,12 +19,6 @@ namespace ExchangeRates.Core.Models
         }
 
 
-        public void UpdateCurrencies(List<ExchangeRatesDTO> list)
-        {
-            _currencies = new MvxObservableCollection<ExchangeRatesDTO>(list);
-        }
-
-
         public async Task GetExchangeRatesAsync()
         {
             try

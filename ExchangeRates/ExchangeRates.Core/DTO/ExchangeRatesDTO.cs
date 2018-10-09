@@ -4,8 +4,6 @@ namespace ExchangeRates.Core.Models
 {
     public class ExchangeRatesDTO
     {
-        public int Id { get; set; }
-
         [JsonProperty(PropertyName = "ccy")]
         public string CurrencyCode { get; set; }
 
