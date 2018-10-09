@@ -12,10 +12,14 @@ namespace ExchangeRates.Core.ViewModels
     {
         private BankBranchesModel _bankBranchesModel = new BankBranchesModel();
         public MvxObservableCollection<BankBranchesDTO> BankBranches => _bankBranchesModel.BankBranches;
+
+        public string City { get; set; }
         public override void Prepare(BankBranchesDTO parameter)
         {
             
         }
+
+
 
 
         public override async void ViewAppeared()

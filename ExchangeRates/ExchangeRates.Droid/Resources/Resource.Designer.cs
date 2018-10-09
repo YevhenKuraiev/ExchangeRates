@@ -4342,8 +4342,8 @@ namespace ExchangeRates.Droid
 			// aapt resource value: 0x7f090035
 			public const int CTRL = 2131296309;
 			
-			// aapt resource value: 0x7f0900a7
-			public const int Code = 2131296423;
+			// aapt resource value: 0x7f090098
+			public const int Code = 2131296408;
 			
 			// aapt resource value: 0x7f090036
 			public const int FUNCTION = 2131296310;
@@ -4501,8 +4501,8 @@ namespace ExchangeRates.Droid
 			// aapt resource value: 0x7f09003b
 			public const int collapseActionView = 2131296315;
 			
-			// aapt resource value: 0x7f09009b
-			public const int container = 2131296411;
+			// aapt resource value: 0x7f09009c
+			public const int container = 2131296412;
 			
 			// aapt resource value: 0x7f090068
 			public const int contentPanel = 2131296360;
@@ -4510,8 +4510,8 @@ namespace ExchangeRates.Droid
 			// aapt resource value: 0x7f090097
 			public const int content_frame = 2131296407;
 			
-			// aapt resource value: 0x7f09009c
-			public const int coordinator = 2131296412;
+			// aapt resource value: 0x7f09009d
+			public const int coordinator = 2131296413;
 			
 			// aapt resource value: 0x7f09008d
 			public const int country = 2131296397;
@@ -4528,20 +4528,20 @@ namespace ExchangeRates.Droid
 			// aapt resource value: 0x7f090062
 			public const int default_activity_button = 2131296354;
 			
-			// aapt resource value: 0x7f09009e
-			public const int design_bottom_sheet = 2131296414;
+			// aapt resource value: 0x7f09009f
+			public const int design_bottom_sheet = 2131296415;
+			
+			// aapt resource value: 0x7f0900a6
+			public const int design_menu_item_action_area = 2131296422;
 			
 			// aapt resource value: 0x7f0900a5
-			public const int design_menu_item_action_area = 2131296421;
+			public const int design_menu_item_action_area_stub = 2131296421;
 			
 			// aapt resource value: 0x7f0900a4
-			public const int design_menu_item_action_area_stub = 2131296420;
+			public const int design_menu_item_text = 2131296420;
 			
 			// aapt resource value: 0x7f0900a3
-			public const int design_menu_item_text = 2131296419;
-			
-			// aapt resource value: 0x7f0900a2
-			public const int design_navigation_view = 2131296418;
+			public const int design_navigation_view = 2131296419;
 			
 			// aapt resource value: 0x7f090022
 			public const int disableHome = 2131296290;
@@ -4621,8 +4621,8 @@ namespace ExchangeRates.Droid
 			// aapt resource value: 0x7f090000
 			public const int item_touch_helper_previous_elevation = 2131296256;
 			
-			// aapt resource value: 0x7f09009a
-			public const int largeLabel = 2131296410;
+			// aapt resource value: 0x7f09009b
+			public const int largeLabel = 2131296411;
 			
 			// aapt resource value: 0x7f09004b
 			public const int left = 2131296331;
@@ -4648,8 +4648,8 @@ namespace ExchangeRates.Droid
 			// aapt resource value: 0x7f0900ae
 			public const int loadingProgressWheel = 2131296430;
 			
-			// aapt resource value: 0x7f090098
-			public const int lvBankBranches = 2131296408;
+			// aapt resource value: 0x7f090099
+			public const int lvBankBranches = 2131296409;
 			
 			// aapt resource value: 0x7f0900aa
 			public const int lvMain = 2131296426;
@@ -4675,8 +4675,8 @@ namespace ExchangeRates.Droid
 			// aapt resource value: 0x7f090094
 			public const int name = 2131296404;
 			
-			// aapt resource value: 0x7f0900a1
-			public const int navigation_header_container = 2131296417;
+			// aapt resource value: 0x7f0900a2
+			public const int navigation_header_container = 2131296418;
 			
 			// aapt resource value: 0x7f09003d
 			public const int never = 2131296317;
@@ -4804,14 +4804,14 @@ namespace ExchangeRates.Droid
 			// aapt resource value: 0x7f090027
 			public const int showTitle = 2131296295;
 			
-			// aapt resource value: 0x7f090099
-			public const int smallLabel = 2131296409;
+			// aapt resource value: 0x7f09009a
+			public const int smallLabel = 2131296410;
+			
+			// aapt resource value: 0x7f0900a1
+			public const int snackbar_action = 2131296417;
 			
 			// aapt resource value: 0x7f0900a0
-			public const int snackbar_action = 2131296416;
-			
-			// aapt resource value: 0x7f09009f
-			public const int snackbar_text = 2131296415;
+			public const int snackbar_text = 2131296416;
 			
 			// aapt resource value: 0x7f090045
 			public const int snap = 2131296325;
@@ -4867,8 +4867,8 @@ namespace ExchangeRates.Droid
 			// aapt resource value: 0x7f0900ac
 			public const int textViewStatus = 2131296428;
 			
-			// aapt resource value: 0x7f0900a6
-			public const int text_input_password_toggle = 2131296422;
+			// aapt resource value: 0x7f0900a7
+			public const int text_input_password_toggle = 2131296423;
 			
 			// aapt resource value: 0x7f090014
 			public const int textinput_counter = 2131296276;
@@ -4900,8 +4900,8 @@ namespace ExchangeRates.Droid
 			// aapt resource value: 0x7f090070
 			public const int topPanel = 2131296368;
 			
-			// aapt resource value: 0x7f09009d
-			public const int touch_outside = 2131296413;
+			// aapt resource value: 0x7f09009e
+			public const int touch_outside = 2131296414;
 			
 			// aapt resource value: 0x7f09000f
 			public const int transition_current_scene = 2131296271;
