@@ -14,6 +14,7 @@ namespace ExchangeRates.Core.ViewModels
         private DetailModel _detailModel;
         public ExchangeRatesDTO ExchangeRates => _detailModel.ExchangeRates;
         public ICommand SaveCommand => new MvxCommand<string>(Save);
+        public ICommand NavigateCommand => new MvxCommand(Navigate);
 
         public DetailViewModel(IMvxNavigationService mvxNavigationService)
         {
@@ -24,6 +25,12 @@ namespace ExchangeRates.Core.ViewModels
         public void Save(string code)
         {
             _navigationService.Close(this);
+        }
+
+
+        public void Navigate()
+        {
+            _navigationService.Navigate<BankBranchesViewModel>();
         }
 
         public override void Prepare(ExchangeRatesDTO parameter)

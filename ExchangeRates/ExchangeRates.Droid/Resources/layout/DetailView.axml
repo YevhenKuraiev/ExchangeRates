@@ -4,6 +4,9 @@
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
+
+
+
 	<EditText
 		android:id="@+id/Code"
 		android:text="124"
@@ -22,6 +25,16 @@
 		android:height="20dp"
 		android:width="20dp"
 		local:MvxBind="Click SaveCommand, CommandParameter=Code">
+		</Button>
+
+		<Button
+		android:id="@+id/button2"
+		android:text="Navigate"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:height="20dp"
+		android:width="20dp"
+		local:MvxBind="Click NavigateCommand">
 		</Button>
 
 </LinearLayout>
